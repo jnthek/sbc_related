@@ -6,20 +6,26 @@ Connect serial to usb converter with voltage selected as 3.3V
 
 `screen /dev/ttyUSB0 115200`
 
-username:`root`
-password:`orangepi`
+username:`root` and password:`orangepi`
 
 Use `orangepi-config` to set static ip, wifi etc.
 
 Login as root and add your preferred <username>
+
 `adduser <username>`
+
 `usermod -aG sudo <username>`
+
 `groups <username>` to inspect the user groups
 
 `deluser --remove-home orangepi` to remove the obvious login with orangepi username
+
 login with the new <username>
+
 `sudo nano /etc/ssh/sshd_config`
+
 change `PermitRootLogin yes` to `PermitRootLogin no` to remove root login attempts via ssh
+
 `sudo systemctl restart sshd` so that the changes work.
 
 If you have ethernet as the headless connection, remove it as apt update tries it first !
@@ -31,6 +37,7 @@ and change all instances of the address to (for example example) http://mirrors.
 
 ### Set NTP 
 `sudo apt install ntp` and check the time with `timedatectl`
+
 `sudo apt-get update`
 
 
