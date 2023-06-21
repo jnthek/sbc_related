@@ -1,6 +1,7 @@
 # Notes on bringing up Orange Pi Zero 2 headless
 
 Using Ubuntu Focal server OS, version Orangepizero2_2.2.0_ubuntu_focal_server_linux4.9.170
+
 Connect serial to usb converter with voltage selected as 3.3V
 
 `screen /dev/ttyUSB0 115200`
