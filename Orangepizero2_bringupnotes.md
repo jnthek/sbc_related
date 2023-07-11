@@ -2,7 +2,7 @@
 
 Using Ubuntu Focal server OS, version Orangepizero2_2.2.0_ubuntu_focal_server_linux4.9.170
 
-Connect serial to usb converter with voltage selected as 3.3V
+Connect serial to usb converter with its voltage selected as 3.3V
 
 `screen /dev/ttyUSB0 115200`
 
@@ -10,7 +10,7 @@ username:`root` and password:`orangepi`
 
 Use `orangepi-config` to set static ip, wifi etc.
 
-Login as root and add your preferred <username>
+Login as root and add your preferred `username`
 
 `adduser <username>`
 
@@ -18,9 +18,9 @@ Login as root and add your preferred <username>
 
 `groups <username>` to inspect the user groups
 
-`deluser --remove-home orangepi` to remove the obvious login with orangepi username
+`deluser --remove-home orangepi` to prevent login attempts with the `orangepi` username
 
-login with the new <username>
+login with the new `username`
 
 `sudo nano /etc/ssh/sshd_config`
 
@@ -28,7 +28,7 @@ change `PermitRootLogin yes` to `PermitRootLogin no` to remove root login attemp
 
 `sudo systemctl restart sshd` so that the changes work.
 
-If you have ethernet as the headless connection, remove it as apt update tries it first !
+If you use ethernet to provide headless connection to the pi, remove it as `apt update` tries it first !
 
 ### Optional step to change the repo location, if the Tsinghua ones are not accessible or slow
 
